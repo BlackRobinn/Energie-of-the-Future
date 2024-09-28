@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do Header */
+header {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #003979;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h1, h2 {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo da Calculadora */
+.calculator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Grupos de Entrada */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo dos Inputs e Selects */
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilo dos Botões */
+.button-calculater button {
+    background-color: #2f4eda;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-calculater button:hover {
+    background-color: #1c3ea0;
+}
+
+/* Estilo de Saída */
+.output {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.output h2 {
+    margin-bottom: 10px;
+}
+
+.output p {
+    margin-bottom: 5px;
+}
+
+/* Estilo para Instruções */
+.instructions {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.instructions h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.instructions p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.instructions p strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.instructions h2, .instructions p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Estilo da Seção "Sobre" */
+.sobre {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.sobre h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.sobre h2 {
+    font-size: 22px;
+    color: #2e7d32;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sobre p strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Estilo dos Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2e7d32;
+}
+
+/* Espaçamento entre Blocos */
+.sobre h1, .sobre h2, .sobre p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Estilo para a Separação */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+
+br {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o fundo do popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo do conteúdo do popup */
+.popup-content {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da imagem dentro do popup */
+.popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+/* Botão para fechar o popup (tamanho ajustado) */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* Tamanho ajustado do botão */
+    z-index: 1001;
+}
+
+/* Zoom da imagem no popup */
+.zoom-in {
+    transform: scale(1.5); /* Amplia a imagem em 1.5 vezes */
+    cursor: zoom-out; /* Muda o cursor ao ampliar */
+}
+
+/* Gráficos */
+.sobre .grafico img {
+    width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém a proporção */
+    max-width: 550px; /* Limite a largura máxima */
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.grafico {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.grafico img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .sobre h1 {
+        font-size: 24px;
+    }
+
+    .sobre h2 {
+        font-size: 20px;
+    }
+
+    .sobre p, .instructions p {
+        font-size: 14px;
+    }
+
+    .instructions h2 {
+        font-size: 24px;
+    }
+
+    .container, .calculator, .instructions {
+        padding: 10px;
+    }
+
+    /* Gráficos */
+    .grafico {
+        flex-direction: column; /* Muda para coluna em telas menores */
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .sobre h1 {
+        font-size: 20px;
+    }
+
+    .sobre h2 {
+        font-size: 16px;
+    }
+
+    .sobre p, .instructions p {
+        font-size: 12px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energia Biogás</title>
+    <link rel="stylesheet" href="biogás.css">
+</head>
+<body>
+
+    <div class="sobre">
+        <h1>Processo de produção do biogás</h1>
+        <h2>Coleta de Matéria Orgânica:</h2> <p> O biogás pode ser produzido a partir de resíduos agrícolas, estrume, restos de alimentos, lodo de esgoto e outros materiais orgânicos. Onde o gás metano  que é cerca de (60% a 80% do biogás) e o gás carbônico, onde é esse gás que é liberado. Os resíduos são levados para os biodigestores onde ocorre a fermentação desses materias orgânico.
+            Utilização do Biogás: O biogás pode ser queimado para gerar calor, convertido em eletricidade em geradores ou purificado para ser usado como biometano.</p>
+
+        <br><br><br>
+        
+        <h1>O que é um Biodigestor?</h1>
+        <p>Um biodigestor, também chamado de reator anaeróbio, é um tanque fechado que proporciona condições adequadas para a atividade de micro-organismos anaeróbios (que vivem sem oxigênio). Esses micro-organismos degradam resíduos orgânicos e geram subprodutos como H2S (gás sulfídrico), NH3 (amônia), CO2 (dióxido de carbono) e CH4 (metano).</p>
+        
+        <div class="grafico">
+            <img class="imagem-para-ampliar" src="./img/biodigestor.jpg">
+        </div>
+
+        <br><br><br>
+        
+        <h1>Condições Necessárias no Biodigestor</h1>
+        <h2>- Temperatura do processo:</h2><p>precisa ser adequada para a atividade dos micro-organismos.</p>
+        <h2>- Pressão interna:</h2> <p>deve ser controlada para evitar falhas no sistema.</p>
+        <h2>- Valor do pH:</h2> <p>precisa ser mantido em um nível apropriado para o funcionamento dos micro-organismos.</p>
+        <h2>- Teor de sólidos:</h2> <p>tanto sólidos totais quanto voláteis devem ser monitorados.</p>
+        <h2>- Tempo de retenção hidráulica:</h2> <p>o tempo em que o material orgânico permanece no sistema.</p>
+        <h2>- Concentração de carga orgânica:</h2> <p>refere-se à quantidade de resíduos orgânicos inseridos no biodigestor.</p>
+        
+        <br><br><br>
+
+        <h1>Tipos de biodigestores</h1>
+        <h2>- Biodigestor batelada:</h2> <p>opera em ciclos fechados, onde todo o material é inserido de uma vez e processado.</p>
+        <h2>- Biodigestor contínuo:</h2> <p>recebe resíduos de forma contínua, permitindo um processo ininterrupto de digestão.</p>
+        <h2>- Biodigestor modelo Indiano:</h2> <p>tem um design específico desenvolvido na Índia, adequado para certas condições locais.</p>
+        <h2>- Biodigestor modelo Chinês:</h2> <p>similar ao indiano, mas adaptado para as condições na China.</p>
+        <h2>- Biodigestor modelo Canadense:</h2> <p>possui um design otimizado para as condições climáticas do Canadá, geralmente mais frio.</p>
+
+        <br><br><br>
+
+        <h1>Aplicações do biogás</h1>
+        <p>O biogás é um combustível renovável, que pode ser usado para energia térmica, mecânica ou elétrica. Algumas das suas principais aplicações são: Nos modelos caseiros, usados em pequenos sítios ou residências, é comum utilizar o biogás produzido em biodigestores como gás de cozinha.
+            também é utilizada especialmente nas pequenas e médias propriedades rurais, a principal utilização do biogás atualmente é a sua queima para a produção de energia térmica.</p>
+
+        <br><br><br>
+
+        <h1>Vantagens e desvantagens</h1>
+        <h2>Principais vantagens do biogás:</h2>
+        <p>- É considerada uma fonte limpa de energia, pois a emissão de gases poluentes e bem menor em comparação com a queima de combustíveis fósseis.
+        <p>- É um importante substituto para os combustíveis derivados de petróleo (gasolina e diesel).
+        <p>- Através de geradores, pode ser usado para geração de energia elétrica.
+
+        <br><br><br>
+
+        <h1>Onde e em quê são mais usados?</h1>
+        <h2>Geração de Energia:</h2><p>O biogás é utilizado para produzir eletricidade e calor, especialmente em usinas de biogás que aproveitam resíduos orgânicos.</p>
+        <h2>Transporte:</h2><p>Em alguns lugares, o biogás é purificado e transformado em biometano, que pode ser utilizado como combustível para veículos.</p>
+        <h2>Agricultura:</h2><p>O biogás também é usado para aquecimento em estufas e para fertilizar solos, após ser processado em digestores anaeróbicos.</p>
+        
+        <br><br><br>
+    </div>
+
+
+    <header>
+        <h1>Calculadora de Biogás</h1>
+    </header>
+    
+    <section class="calculator">
+        <div class="input-group">
+            <label for="biomassType">Tipo de Biomassa:</label>
+            <select id="biomassType">
+                <option value="agricultural">Resíduos Agrícolas</option>
+                <option value="animal">Dejetos Animais</option>
+                <option value="industrial">Resíduos Industriais</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="biomassAmount">Quantidade de Biomassa (toneladas):</label>
+            <input type="number" id="biomassAmount" placeholder="Insira a quantidade">
+        </div>
+
+        <div class="input-group">
+            <label for="humidityContent">Teor de Umidade (%):</label>
+            <input type="number" id="humidityContent" placeholder="Ex: 60">
+        </div>
+
+        <div class="input-group">
+            <label for="retentionTime">Tempo de Retenção Hidráulica (dias):</label>
+            <input type="number" id="retentionTime" placeholder="Ex: 30">
+        </div>
+
+        <div class="input-group">
+            <label for="efficiency">Eficiência do Biodigestor (%):</label>
+            <input type="number" id="efficiency" placeholder="Ex: 85">
+        </div>
+
+        <div class="button-calculater">
+        <button id="calculateBtn">Calcular Biogás</button>
+    </div>
+
+        <div class="output">
+            <h2>Resultados:</h2>
+            <p id="biogasVolume">Volume de Biogás: -</p>
+            <p id="energyPotential">Potencial de Geração de Energia: -</p>
+            <p id="methaneProduced">Quantidade de Metano Produzido: -</p>
+        </div>
+    </section>
+
+    <!-- Instruções de Uso da Calculadora -->
+    <div class="instructions">
+        <h2>Como Usar a Calculadora</h2>
+
+        <p><strong>Tipo de biomassa:</strong> Escolha o tipo de biomassa que você está utilizando, como resíduos agrícolas, dejetos animais ou resíduos industriais.</p>
+
+        <p><strong>Quantidade de biomassa (toneladas):</strong> Informe a quantidade de biomassa disponível em toneladas. Quanto maior a quantidade, maior o potencial de produção de biogás.</p>
+
+        <p><strong>Teor de umidade (%):</strong> Indique o percentual de umidade presente na biomassa. Umidade elevada pode afetar a eficiência do processo de digestão.</p>
+
+        <p><strong>Tempo de retenção hidráulica (dias):</strong> O tempo de retenção hidráulica é o número de dias que a biomassa ficará dentro do biodigestor para ser convertida em biogás.</p>
+
+        <p><strong>Eficiência do biodigestor (%):</strong> Informe a eficiência do biodigestor utilizado. Biodigestores mais eficientes convertem uma maior quantidade de biomassa em biogás.</p>
+
+        <p>Com esses dados, a calculadora fornecerá:</p>
+        <p><strong>Volume de biogás produzido:</strong> Estimativa do volume de biogás produzido (em metros cúbicos por dia ou por ano).</p>
+
+        <p><strong>Potencial de geração de energia:</strong> Estimativa da energia que pode ser gerada a partir do biogás produzido, medida em quilowatts-hora (kWh).</p>
+
+        <p><strong>Quantidade de metano produzido:</strong> Estimativa da quantidade de metano gerado, que é o principal componente do biogás e um gás valioso para geração de energia.</p>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup" id="close-popup">Fechar</button>
+            <img id="popup-image" src="" alt="Imagem Ampliada">
+        </div>
+    </div>
+    
+
+
+    <script>
+        // Seleciona os elementos necessários
+const popupOverlay = document.getElementById('popup-overlay');
+const popupImage = document.getElementById('popup-image');
+const closePopupBtn = document.getElementById('close-popup');
+
+// Função para abrir o popup
+function openPopup(imageSrc) {
+    popupImage.src = imageSrc; // Define a imagem no popup
+    popupOverlay.style.display = 'flex'; // Mostra o popup (centralizado)
+}
+
+// Função para fechar o popup
+function closePopup() {
+    popupOverlay.style.display = 'none'; // Esconde o popup
+    popupImage.classList.remove('zoom-in'); // Remove o zoom caso tenha sido ativado
+}
+
+// Evento para fechar o popup quando clicar no botão de fechar
+closePopupBtn.addEventListener('click', closePopup);
+
+// Evento para aplicar o zoom quando clicar na imagem dentro do popup
+popupImage.addEventListener('click', function() {
+    if (popupImage.classList.contains('zoom-in')) {
+        popupImage.classList.remove('zoom-in'); // Remove o zoom se já estiver aplicado
+    } else {
+        popupImage.classList.add('zoom-in'); // Aplica o zoom
+    }
+});
+
+// Exemplo de como abrir o popup (adicione isso aos seus links de imagem)
+// Substitua 'srcDaImagem' pelo caminho da imagem que você quer ampliar
+document.querySelectorAll('.imagem-para-ampliar').forEach(img => {
+    img.addEventListener('click', function() {
+        openPopup(this.src); // Abre o popup ao clicar na imagem
+    });
+});
+
+
+
+// Calculadora de Biomassa
+
+document.getElementById('calculateBtn').addEventListener('click', function() {
+    const biomassType = document.getElementById('biomassType').value;
+    const biomassAmount = parseFloat(document.getElementById('biomassAmount').value);
+    const humidityContent = parseFloat(document.getElementById('humidityContent').value);
+    const retentionTime = parseFloat(document.getElementById('retentionTime').value);
+    const efficiency = parseFloat(document.getElementById('efficiency').value);
+
+    if (isNaN(biomassAmount) || isNaN(humidityContent) || isNaN(retentionTime) || isNaN(efficiency)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    // Fórmulas de cálculo de biogás
+    const biogasPerTon = getBiogasPerTon(biomassType);
+    const biogasVolume = (biomassAmount * (1 - humidityContent / 100)) * biogasPerTon * (efficiency / 100);
+    const methaneProduced = biogasVolume * 0.6; // Aproximadamente 60% do biogás é metano
+    const energyPotential = methaneProduced * 9.97; // 9.97 kWh por metro cúbico de metano
+
+    // Atualiza os resultados na página
+    document.getElementById('biogasVolume').textContent = `Volume de Biogás: ${biogasVolume.toFixed(2)} m³/dia`;
+    document.getElementById('energyPotential').textContent = `Potencial de Geração de Energia: ${energyPotential.toFixed(2)} kWh`;
+    document.getElementById('methaneProduced').textContent = `Quantidade de Metano Produzido: ${methaneProduced.toFixed(2)} m³`;
+});
+
+function getBiogasPerTon(biomassType) {
+    // Valores aproximados de biogás por tonelada de biomassa
+    switch (biomassType) {
+        case 'agricultural':
+            return 100; // 100 m³ de biogás por tonelada de resíduos agrícolas
+        case 'animal':
+            return 200; // 200 m³ de biogás por tonelada de dejetos animais
+        case 'industrial':
+            return 150; // 150 m³ de biogás por tonelada de resíduos industriais
+        default:
+            return 0;
+    }
+}
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

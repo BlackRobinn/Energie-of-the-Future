@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usinas Hidrelétricas</title>
+    <link rel="stylesheet" href="hidrelétrica.css">
+</head>
+<body>
+
+    <div class="sobre">
+        <h1>Tipos de Usinas Hidrelétricas</h1>
+        <p>As usinas hidrelétricas podem ser classificadas em três macrocategorias, de acordo com o tipo de sistema utilizado:</p>
+        <ul>
+            <li><strong>Usinas de Passagem</strong>: Aproveitam o fluxo natural dos rios, minimizando a intervenção no ecossistema.</li>
+            <li><strong>Usinas de Reservatório</strong>: Acumulam água em grandes volumes, permitindo um controle eficaz da geração de energia.</li>
+            <li><strong>Usinas de Armazenamento</strong>: Mantêm água em reservatórios para uso durante períodos de maior demanda.</li>
+
+            <div class="grafico">
+                <img class="imagem-para-ampliar" src="./img/hidreletrica de passagem.jpg">
+                <img class="imagem-para-ampliar" src="./img/hidreletrica de reservatorio.jpg">
+                <img class="imagem-para-ampliar" src="./img/hidreletrica de armazenmaneto.jpg">
+            </div>
+        </ul>
+
+        <h1>Componentes de uma Usina Hidrelétrica</h1>
+        <p>Uma usina hidrelétrica é composta pelos seguintes elementos:</p>
+        <ul>
+            <li><strong>Barragem</strong>: Estrutura que retém a água e cria um reservatório.</li>
+            <li><strong>Sistemas de Captação e Aducção de Água</strong>: Capturam a água e a conduzem até a casa de força.</li>
+            <li><strong>Casa de Força</strong>: Onde as turbinas e geradores estão localizados.</li>
+            <li><strong>Sistema de Restituição de Água</strong>: Conduz a água de volta ao leito natural do rio, mantendo o ecossistema.</li>
+
+            <div class="grafico">
+                <img class="imagem-para-ampliar" src="./img/passo a passo hidreletrica.png">
+            </div>
+        </ul>
+
+        <h1>Funcionamento</h1>
+        <p>O funcionamento de uma usina hidrelétrica ocorre em etapas:</p>
+        <p>A água em movimento aciona turbinas, convertendo sua energia potencial em energia mecânica. Essa energia é transferida para um gerador rotativo, conhecido como alternador, que transforma a energia mecânica em energia elétrica através da indução eletromagnética. Após a conversão, a água é direcionada para um canal de descarga, retornando ao seu curso natural. Esse processo não apenas gera eletricidade, mas também demonstra a eficiência da energia renovável, utilizando um recurso natural abundante.</p>
+
+        <h1>Impacto Ambiental</h1>
+        <p>As usinas hidrelétricas apresentam vantagens em comparação a outras fontes de energia, como as termelétricas, pois emitem menos poluentes na atmosfera e possuem custos operacionais inferiores.</p>
+        <p>Adicionalmente, as hidrelétricas, devido à sua localização, podem oferecer opções de lazer e impulsionar o turismo local.</p>
+        <p>Uma das principais vantagens é que utilizam a água, um recurso renovável, para a produção de energia.</p>
+
+        <h3>Desvantagens</h3>
+        <p>No entanto, a construção de usinas hidrelétricas afeta o ambiente natural. Isso pode levar à extinção de espécies terrestres e aquáticas, destruição da vegetação nativa para a construção de barragens e aumento da emissão de gases poluentes, especialmente o metano. Além disso, comunidades locais, como ribeirinhos e indígenas, podem ser prejudicadas, uma vez que dependem dos recursos naturais da região para sua subsistência.</p>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup" id="close-popup">Fechar</button>
+            <img id="popup-image" src="" alt="Imagem Ampliada">
+        </div>
+    </div>
+    
+
+
+    <script>
+        // Seleciona os elementos necessários
+const popupOverlay = document.getElementById('popup-overlay');
+const popupImage = document.getElementById('popup-image');
+const closePopupBtn = document.getElementById('close-popup');
+
+// Função para abrir o popup
+function openPopup(imageSrc) {
+    popupImage.src = imageSrc; // Define a imagem no popup
+    popupOverlay.style.display = 'flex'; // Mostra o popup (centralizado)
+}
+
+// Função para fechar o popup
+function closePopup() {
+    popupOverlay.style.display = 'none'; // Esconde o popup
+    popupImage.classList.remove('zoom-in'); // Remove o zoom caso tenha sido ativado
+}
+
+// Evento para fechar o popup quando clicar no botão de fechar
+closePopupBtn.addEventListener('click', closePopup);
+
+// Evento para aplicar o zoom quando clicar na imagem dentro do popup
+popupImage.addEventListener('click', function() {
+    if (popupImage.classList.contains('zoom-in')) {
+        popupImage.classList.remove('zoom-in'); // Remove o zoom se já estiver aplicado
+    } else {
+        popupImage.classList.add('zoom-in'); // Aplica o zoom
+    }
+});
+
+// Exemplo de como abrir o popup (adicione isso aos seus links de imagem)
+// Substitua 'srcDaImagem' pelo caminho da imagem que você quer ampliar
+document.querySelectorAll('.imagem-para-ampliar').forEach(img => {
+    img.addEventListener('click', function() {
+        openPopup(this.src); // Abre o popup ao clicar na imagem
+    });
+});
+
+    </script>
+
+</body>
+</html>
